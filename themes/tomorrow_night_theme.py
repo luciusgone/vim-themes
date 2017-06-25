@@ -11,9 +11,9 @@ hi_rules = []
 
 # predefined color set
 foreground = "c5c8c6"
-background = "1d1f21"
-selection = "373b41"
-line = "282a2e"
+background = "303030"
+selection = "585858"
+line = "3a3a3a"
 comment = "969896"
 # variables, xml tags, markup link text, markup lists, diff deleted
 red = "cc6666"
@@ -30,7 +30,7 @@ blue = "81a2be"
 # key words, storage, selector, markup italic, diff changed
 purple = "b294bb"
 # invisible
-window = "4d5057"
+window = "5e5e5e"
 
 # attr key words
 none = "none"
