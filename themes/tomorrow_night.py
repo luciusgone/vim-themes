@@ -434,7 +434,7 @@ def generate():
 def clear_hi_rules():
     """Clear the theme rules
     """
-    hi_rules.clear
+    hi_rules.clear()
 
 def write_rules_to_file():
     """Write theme rules to file
