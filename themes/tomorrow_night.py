@@ -10,10 +10,15 @@ terminal_colors = 256
 hi_rules = []
 
 # predefined color set
+# default foreground color
 foreground = ["c5c8c6", "c5c8c6"]
+# default background color
 background = ["1d1f21", "303030"]
+# default selection color
 selection = ["373b41", "585858"]
+# default line color
 line = ["282a2e", "3a3a3a"]
+# default comment color
 comment = ["969896", "969896"]
 # variables, xml tags, markup link text, markup lists, diff deleted
 red = ["cc6666", "cc6666"]
@@ -420,14 +425,33 @@ def generate_hi_rules():
     hi("diffRemoved", red, None, None)
     hi("gitcommitSummary", None, None, bold)
 
-def main():
-    """Generate the tomorrow vim color scheme
+def generate():
+    """Generate all rules
     """
     prelude()
     generate_hi_rules()
+
+def clear_hi_rules():
+    """Clear the theme rules
+    """
+    hi_rules.clear
+
+def write_rules_to_file():
+    """Write theme rules to file
+    """
     with open(f"./colors/{scheme_name}.vim", "w+") as f:
         for rule in hi_rules:
             f.write(rule)
+
+def main():
+    """Main entry
+    """
+    clear_hi_rules()
+    generate()
+    write_rules_to_file()
+
+# generate the rules immediately
+generate()
 
 if __name__ == '__main__':
     main()
