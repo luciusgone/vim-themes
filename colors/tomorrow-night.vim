@@ -1,6 +1,6 @@
-set background=dark
 hi clear
 syntax reset
+set background=dark
 let g:colors_name="tomorrow-night"
 
 hi Normal guifg=#c5c8c6 ctermfg=250
