@@ -10,27 +10,27 @@ terminal_colors = 256
 hi_rules = []
 
 # predefined color set
-foreground = "c5c8c6"
-background = "303030"
-selection = "585858"
-line = "3a3a3a"
-comment = "969896"
+foreground = ["c5c8c6", "c5c8c6"]
+background = ["1d1f21", "303030"]
+selection = ["373b41", "585858"]
+line = ["282a2e", "3a3a3a"]
+comment = ["969896", "969896"]
 # variables, xml tags, markup link text, markup lists, diff deleted
-red = "cc6666"
+red = ["cc6666", "cc6666"]
 # integers boolean constants, xml attributes, markup lik url
-orange = "de935f"
+orange = ["de935f", "de935f"]
 # classes markup bold search text background
-yellow = "f0c674"
+yellow = ["f0c674", "f0c674"]
 # strings, inherited class markup code, diff inserted
-green = "b5bd68"
+green = ["b5bd68", "b5bd68"]
 # support, regular expressions, escape characters, markup quotes
-aqua = "8abeb7"
+aqua = ["8abeb7", "8abeb7"]
 # functions, methods, attribute ids, headings
-blue = "81a2be"
+blue = ["81a2be", "81a2be"]
 # key words, storage, selector, markup italic, diff changed
-purple = "b294bb"
+purple = ["b294bb", "b294bb"]
 # invisible
-window = "5e5e5e"
+window = ["4d5057", "5e5e5e"]
 
 # attr key words
 none = "none"
@@ -164,9 +164,9 @@ def hi(group, fg, bg, attr):
     """Returns the highlight command string.
     """
     if fg != None:
-        hi_rules.append(f"hi {group} guifg=#{fg} ctermfg={rgb(fg)}\n")
+        hi_rules.append(f"hi {group} guifg=#{fg[0]} ctermfg={rgb(fg[1])}\n")
     if bg != None:
-        hi_rules.append(f"hi {group} guibg=#{bg} ctermbg={rgb(bg)}\n")
+        hi_rules.append(f"hi {group} guibg=#{bg[0]} ctermbg={rgb(bg[1])}\n")
     if attr != None:
         hi_rules.append(f"hi {group} gui={attr} cterm={attr}\n")
 
@@ -311,9 +311,9 @@ def generate_hi_rules():
     hi("htmlScriptTag", red, None, None)
 
     # Diff Highlighting
-    hi("diffAdd", None, "4c4e39", None)
+    # hi("diffAdd", None, "4c4e39", None)
     hi("diffDelete", background, red, None)
-    hi("diffChange", None, "2B5B77", None)
+    # hi("diffChange", None, "2B5B77", None)
     hi("diffText", line, blue, None)
 
     # ShowMarks Highlighting
