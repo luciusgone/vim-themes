@@ -5,7 +5,6 @@
 scheme_name = "tomorrow-night-eighties"
 theme_background = "dark"
 terminal_colors = 256
-hi_rules = []
 
 # color set
 foreground = ["cccccc", "cccccc"]

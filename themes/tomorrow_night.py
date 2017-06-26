@@ -5,7 +5,6 @@
 scheme_name = "tomorrow-night"
 theme_background = "dark"
 terminal_colors = 256
-hi_rules = []
 
 # predefined color set
 # default foreground color

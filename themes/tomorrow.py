@@ -5,7 +5,6 @@
 scheme_name = "tomorrow"
 theme_background = "light"
 terminal_colors = 256
-hi_rules = []
 
 # color set
 foreground = ["4d4d4c", "4d4d4c"]

@@ -12,8 +12,8 @@ def write_theme_file(theme):
 
 def main():
     for theme in themes.all_themes:
-        generator.generate_hi_rules(theme)
-        write_theme_file(theme)
+        g = generator.generate_hi_rules(theme)
+        write_theme_file(g)
 
 if __name__ == "__main__":
     main()
