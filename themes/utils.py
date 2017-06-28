@@ -176,11 +176,13 @@ class Theme(object):
             self.hi_rules[rule.group] = hi
     def rule(self, name):
         return self.hi_rules[name]
+    @property
     def rules(self):
         rule_str = ""
         for name in self.hi_rules:
             rule_str += str(self.hi_rules[name])
         return rule_str
+    @property
     def common_rules(self):
         cr_str = ""
         cr_str += "hi clear\n"
