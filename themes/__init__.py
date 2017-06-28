@@ -1,8 +1,12 @@
-import themes.tomorrow
-import themes.tomorrow_night
-import themes.tomorrow_night_blue
-import themes.tomorrow_night_bright
-import themes.tomorrow_night_eighties
+from themes.collection import all_collection
+from themes.rules import all_rules
 
-all_themes = (tomorrow, tomorrow_night, tomorrow_night_blue,
-        tomorrow_night_bright, tomorrow_night_eighties)
+for t in all_collection:
+    t.add_rules(all_rules)
+
+def generate():
+    for t in all_collection:
+        print(f"generating theme {t.scheme_name}")
+        with open(f"./colors/{t.scheme_name}.vim", "w+") as f:
+            f.write(t.common_rules())
+            f.write(t.rules())

@@ -3,28 +3,16 @@ syntax reset
 set background=dark
 let g:colors_name="tomorrow-night-bright"
 
-hi Normal guifg=#eaeaea ctermfg=254
-hi Normal guibg=#000000 ctermbg=16
+hi Normal guifg=#eaeaea guibg=#000000 ctermfg=254 ctermbg=16
 hi LineNr guifg=#424242 ctermfg=237
 hi NonText guifg=#424242 ctermfg=237
 hi SpecialKey guifg=#424242 ctermfg=237
-hi Search guifg=#000000 ctermfg=16
-hi Search guibg=#e7c547 ctermbg=184
-hi TabLine guifg=#4d5057 ctermfg=59
-hi TabLine guibg=#eaeaea ctermbg=254
-hi TabLine gui=reverse cterm=reverse
-hi TabLineFill guifg=#4d5057 ctermfg=59
-hi TabLineFill guibg=#eaeaea ctermbg=254
-hi TabLineFill gui=reverse cterm=reverse
-hi StatusLine guifg=#4d5057 ctermfg=59
-hi StatusLine guibg=#e7c547 ctermbg=184
-hi StatusLine gui=reverse cterm=reverse
-hi StatusLineNC guifg=#4d5057 ctermfg=59
-hi StatusLineNC guibg=#eaeaea ctermbg=254
-hi StatusLineNC gui=reverse cterm=reverse
-hi VertSplit guifg=#4d5057 ctermfg=59
-hi VertSplit guibg=#4d5057 ctermbg=59
-hi VertSplit gui=none cterm=none
+hi Search guifg=#000000 guibg=#e7c547 ctermfg=16 ctermbg=184
+hi TabLine guifg=#4d5057 guibg=#eaeaea gui=reverse ctermfg=59 ctermbg=254 cterm=reverse
+hi TabLineFill guifg=#4d5057 guibg=#eaeaea gui=reverse ctermfg=59 ctermbg=254 cterm=reverse
+hi StatusLine guifg=#4d5057 guibg=#e7c547 gui=reverse ctermfg=59 ctermbg=184 cterm=reverse
+hi StatusLineNC guifg=#4d5057 guibg=#eaeaea gui=reverse ctermfg=59 ctermbg=254 cterm=reverse
+hi VertSplit guifg=#4d5057 guibg=#4d5057 gui=none ctermfg=59 ctermbg=59 cterm=none
 hi Visual guibg=#424242 ctermbg=237
 hi Directory guifg=#7aa6da ctermfg=110
 hi ModeMsg guifg=#b9ca4a ctermfg=148
@@ -32,29 +20,18 @@ hi MoreMsg guifg=#b9ca4a ctermfg=148
 hi Question guifg=#b9ca4a ctermfg=148
 hi WarningMsg guifg=#d54e53 ctermfg=167
 hi MatchParen guibg=#424242 ctermbg=237
-hi Folded guifg=#969896 ctermfg=245
-hi Folded guibg=#000000 ctermbg=16
+hi Folded guifg=#969896 guibg=#000000 ctermfg=245 ctermbg=16
 hi FoldColumn guibg=#000000 ctermbg=16
-hi CursorLine guibg=#2a2a2a ctermbg=234
-hi CursorLine gui=none cterm=none
-hi CursorColumn guibg=#2a2a2a ctermbg=234
-hi CursorColumn gui=none cterm=none
-hi PMenu guifg=#eaeaea ctermfg=254
-hi PMenu guibg=#424242 ctermbg=237
-hi PMenu gui=none cterm=none
-hi PMenuSel guifg=#eaeaea ctermfg=254
-hi PMenuSel guibg=#424242 ctermbg=237
-hi PMenuSel gui=reverse cterm=reverse
-hi SignColumn guibg=#000000 ctermbg=16
-hi SignColumn gui=none cterm=none
-hi ColorColumn guibg=#2a2a2a ctermbg=234
-hi ColorColumn gui=none cterm=none
+hi CursorLine guibg=#2a2a2a gui=none ctermbg=234 cterm=none
+hi CursorColumn guibg=#2a2a2a gui=none ctermbg=234 cterm=none
+hi PMenu guifg=#eaeaea guibg=#424242 gui=none ctermfg=254 ctermbg=237 cterm=none
+hi PMenuSel guifg=#eaeaea guibg=#424242 gui=reverse ctermfg=254 ctermbg=237 cterm=reverse
+hi SignColumn guibg=#000000 gui=none ctermbg=16 cterm=none
+hi ColorColumn guibg=#2a2a2a gui=none ctermbg=234 cterm=none
 hi Comment guifg=#969896 ctermfg=245
-hi Todo guifg=#969896 ctermfg=245
-hi Todo guibg=#000000 ctermbg=16
+hi Todo guifg=#969896 guibg=#000000 ctermfg=245 ctermbg=16
 hi Title guifg=#969896 ctermfg=245
-hi Identifier guifg=#d54e53 ctermfg=167
-hi Identifier gui=none cterm=none
+hi Identifier guifg=#d54e53 gui=none ctermfg=167 cterm=none
 hi Statement guifg=#eaeaea ctermfg=254
 hi Conditional guifg=#eaeaea ctermfg=254
 hi Repeat guifg=#eaeaea ctermfg=254
@@ -65,15 +42,11 @@ hi Keyword guifg=#e78c45 ctermfg=172
 hi String guifg=#b9ca4a ctermfg=148
 hi Special guifg=#eaeaea ctermfg=254
 hi PreProc guifg=#c397d8 ctermfg=176
-hi Operator guifg=#70c0b1 ctermfg=73
-hi Operator gui=none cterm=none
-hi Type guifg=#7aa6da ctermfg=110
-hi Type gui=none cterm=none
-hi Define guifg=#c397d8 ctermfg=176
-hi Define gui=none cterm=none
+hi Operator guifg=#70c0b1 gui=none ctermfg=73 cterm=none
+hi Type guifg=#7aa6da gui=none ctermfg=110 cterm=none
+hi Define guifg=#c397d8 gui=none ctermfg=176 cterm=none
 hi Include guifg=#7aa6da ctermfg=110
-hi vimCommand guifg=#d54e53 ctermfg=167
-hi vimCommand gui=none cterm=none
+hi vimCommand guifg=#d54e53 gui=none ctermfg=167 cterm=none
 hi cType guifg=#e7c547 ctermfg=184
 hi cStorageClass guifg=#c397d8 ctermfg=176
 hi cConditional guifg=#c397d8 ctermfg=176
@@ -113,11 +86,10 @@ hi crystalException guifg=#c397d8 ctermfg=176
 hi pythonInclude guifg=#c397d8 ctermfg=176
 hi pythonStatement guifg=#c397d8 ctermfg=176
 hi pythonConditional guifg=#c397d8 ctermfg=176
-hi pythonRepeat guifg=#c397d8 ctermfg=176
+hi pythonRepeat guifg=#70c0b1 ctermfg=73
 hi pythonException guifg=#c397d8 ctermfg=176
 hi pythonFunction guifg=#7aa6da ctermfg=110
 hi pythonPreCondit guifg=#c397d8 ctermfg=176
-hi pythonRepeat guifg=#70c0b1 ctermfg=73
 hi pythonExClass guifg=#e78c45 ctermfg=172
 hi javaScriptBraces guifg=#eaeaea ctermfg=254
 hi javaScriptFunction guifg=#c397d8 ctermfg=176
@@ -136,22 +108,12 @@ hi htmlTag guifg=#d54e53 ctermfg=167
 hi htmlTagName guifg=#d54e53 ctermfg=167
 hi htmlArg guifg=#d54e53 ctermfg=167
 hi htmlScriptTag guifg=#d54e53 ctermfg=167
-hi diffDelete guifg=#000000 ctermfg=16
-hi diffDelete guibg=#d54e53 ctermbg=167
-hi diffText guifg=#2a2a2a ctermfg=234
-hi diffText guibg=#7aa6da ctermbg=110
-hi ShowMarksHLl guifg=#e78c45 ctermfg=172
-hi ShowMarksHLl guibg=#000000 ctermbg=16
-hi ShowMarksHLl gui=none cterm=none
-hi ShowMarksHLo guifg=#c397d8 ctermfg=176
-hi ShowMarksHLo guibg=#000000 ctermbg=16
-hi ShowMarksHLo gui=none cterm=none
-hi ShowMarksHLu guifg=#e7c547 ctermfg=184
-hi ShowMarksHLu guibg=#000000 ctermbg=16
-hi ShowMarksHLu gui=none cterm=none
-hi ShowMarksHLm guifg=#70c0b1 ctermfg=73
-hi ShowMarksHLm guibg=#000000 ctermbg=16
-hi ShowMarksHLm gui=none cterm=none
+hi diffDelete guifg=#000000 guibg=#d54e53 ctermfg=16 ctermbg=167
+hi diffText guifg=#2a2a2a guibg=#7aa6da ctermfg=234 ctermbg=110
+hi ShowMarksHLl guifg=#e78c45 guibg=#000000 gui=none ctermfg=172 ctermbg=16 cterm=none
+hi ShowMarksHLo guifg=#c397d8 guibg=#000000 gui=none ctermfg=176 ctermbg=16 cterm=none
+hi ShowMarksHLu guifg=#e7c547 guibg=#000000 gui=none ctermfg=184 ctermbg=16 cterm=none
+hi ShowMarksHLm guifg=#70c0b1 guibg=#000000 gui=none ctermfg=73 ctermbg=16 cterm=none
 hi luaStatement guifg=#c397d8 ctermfg=176
 hi luaRepeat guifg=#c397d8 ctermfg=176
 hi luaCondStart guifg=#c397d8 ctermfg=176
@@ -191,7 +153,6 @@ hi clojureUnquote guifg=#7aa6da ctermfg=110
 hi clojureMeta guifg=#7aa6da ctermfg=110
 hi clojureDeref guifg=#7aa6da ctermfg=110
 hi clojureAnonArg guifg=#7aa6da ctermfg=110
-hi clojureRepeat guifg=#7aa6da ctermfg=110
 hi clojureDispatch guifg=#7aa6da ctermfg=110
 hi scalaKeyword guifg=#c397d8 ctermfg=176
 hi scalaKeywordModifier guifg=#c397d8 ctermfg=176
@@ -217,7 +178,7 @@ hi scalaAnnotation guifg=#e78c45 ctermfg=172
 hi scalaNumber guifg=#e78c45 ctermfg=172
 hi scalaDefSpecializer guifg=#e7c547 ctermfg=184
 hi scalaClassSpecializer guifg=#e7c547 ctermfg=184
-hi scalaBackTick guifg=#b9ca4a ctermfg=148
+hi scalaBackTick guifg=#7aa6da ctermfg=110
 hi scalaRoot guifg=#eaeaea ctermfg=254
 hi scalaMethodCall guifg=#7aa6da ctermfg=110
 hi scalaCaseType guifg=#e7c547 ctermfg=184
@@ -234,7 +195,6 @@ hi scalaSymbol guifg=#e78c45 ctermfg=172
 hi scalaChar guifg=#e78c45 ctermfg=172
 hi scalaXml guifg=#b9ca4a ctermfg=148
 hi scalaConstructorSpecializer guifg=#e7c547 ctermfg=184
-hi scalaBackTick guifg=#7aa6da ctermfg=110
 hi diffAdded guifg=#b9ca4a ctermfg=148
 hi diffRemoved guifg=#d54e53 ctermfg=167
 hi gitcommitSummary gui=bold cterm=bold
