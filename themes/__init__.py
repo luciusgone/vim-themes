@@ -10,3 +10,8 @@ def generate():
         with open(f"./colors/{t.scheme_name}.vim", "w+") as f:
             f.write(t.common_rules)
             f.write(t.rules)
+
+def print_color_palette():
+    for t in all_collection:
+        print(f"{t.scheme_name}:\n")
+        print(t.palette_board)
