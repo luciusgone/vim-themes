@@ -1,5 +1,24 @@
-colorset  = ("foreground", "background","selection", "line", "comment", "red",
-        "orange", "yellow", "green", "aqua", "blue", "purple", "window")
+"""Color utils
+"""
+
+# keywords of rules
+# color set
+foreground = "foreground"
+background = "background"
+selection  = "selection"
+line       = "line"
+comment    = "comment"
+red        = "red"
+orange     = "orange"
+yellow     = "yellow"
+green      = "green"
+aqua       = "aqua"
+blue       = "blue"
+purple     = "purple"
+window     = "window"
+
+colorset  = (foreground, background,selection, line, comment, red,
+        orange, yellow, green, aqua, blue, purple, window)
 
 class HexColorConv(object):
     """Hex color conversion class
@@ -146,54 +165,11 @@ class ColorSet(object):
             return self._cs[k[0]][0]
         else:
             return self._conv.rgb(self._cs[k[0]][1])
-
-class HiRule(object):
-    def __init__(self, rule, color_set):
-        self.group = rule.group
-        self.guifg = color_set[rule.fg] if rule.fg else None
-        self.ctermfg = color_set[rule.fg, False] if rule.fg else None
-        self.guibg = color_set[rule.bg] if rule.bg else None
-        self.ctermbg = color_set[rule.bg, False] if rule.bg else None
-        self.attr = rule.attr if rule.attr else None
-    def __str__(self):
-        g = f"hi {self.group}"
-        gf = f" guifg=#{self.guifg}" if self.guifg else ""
-        gb = f" guibg=#{self.guibg}" if self.guibg else ""
-        tf = f" ctermfg={self.ctermfg}" if self.ctermfg else ""
-        tb = f" ctermbg={self.ctermbg}" if self.ctermbg else ""
-        ga = f" gui={self.attr}" if self.attr else ""
-        ta = f" cterm={self.attr}" if self.attr else ""
-        eol = "\n"
-        return g + gf + gb + ga + tf + tb + ta + eol
-
-class Theme(object):
-    def __init__(self, scheme_name, theme_background, terminal_colors, **cs):
-        self.scheme_name      = scheme_name
-        self.theme_background = theme_background
-        self.terminal_colors  = terminal_colors
-        self.hi_rules         = {}
-        self.color_set        = ColorSet(cs, terminal_colors)
-    def add_rules(self, rules):
-        for rule in rules:
-            hi = HiRule(rule, self.color_set)
-            self.hi_rules[rule.group] = hi
-    def rule(self, name):
-        return self.hi_rules[name]
-    @property
-    def rules(self):
-        rule_str = ""
-        for name in self.hi_rules:
-            rule_str += str(self.hi_rules[name])
-        return rule_str
-    @property
-    def common_rules(self):
-        cr_str = ""
-        cr_str += "hi clear\n"
-        cr_str += "syntax reset\n"
-        cr_str += f"set background={self.theme_background}\n"
-        cr_str += f'let g:colors_name="{self.scheme_name}"\n'
-        cr_str += "\n"
-        return cr_str
+    def __getattr__(self, name):
+        try:
+            return self._ansi_esc_str(name)
+        except KeyError as e:
+            raise AttributeError(e)
     @property
     def palette_board(self):
         global colorset
@@ -208,5 +184,6 @@ class Theme(object):
         pb_str = bg + fg * 2 + bg
         return pb_str
     def _ansi_esc_str(self, name):
-        c = self.color_set[name, False]
+        c = self[name, False]
         return f"\033[48;5;{c}m \033[m"
+

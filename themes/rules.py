@@ -1,3 +1,7 @@
+from themes.colors import (foreground, background,selection, line, comment,
+        red, orange, yellow, green, aqua, blue, purple, window)
+from themes.keywords import none, bold, reverse
+
 class Rule(object):
     """Generic rules
     """
@@ -9,26 +13,6 @@ class Rule(object):
     def __str__(self):
         s = "group {} -> foreground: {}, background: {}, attr: {}"
         return s.format(self.group, self.fg, self.bg, self.attr)
-
-# keywords of rules
-# color set
-foreground = "foreground"
-background = "background"
-selection = "selection"
-line = "line"
-comment = "comment"
-red = "red"
-orange = "orange"
-yellow = "yellow"
-green = "green"
-aqua = "aqua"
-blue = "blue"
-purple = "purple"
-window = "window"
-# attribute keyword
-none = "none"
-bold = "bold"
-reverse = "reverse"
 
 all_rules = [
         Rule("Normal", foreground, background, None),

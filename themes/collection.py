@@ -1,6 +1,6 @@
-from themes.utils import Theme
+from themes.scheme import Scheme
 
-tomorrow = Theme(
+tomorrow = Scheme(
         scheme_name = "tomorrow",
         theme_background = "light",
         terminal_colors = 256,
@@ -20,7 +20,7 @@ tomorrow = Theme(
         window = ["efefef", "efefef"]
 )
 
-tomorrow_night = Theme(
+tomorrow_night = Scheme(
         scheme_name = "tomorrow-night",
         theme_background = "dark",
         terminal_colors = 256,
@@ -40,7 +40,7 @@ tomorrow_night = Theme(
         window = ["4d5057", "5e5e5e"]
 )
 
-tomorrow_night_blue = Theme(
+tomorrow_night_blue = Scheme(
         scheme_name = "tomorrow-night-blue",
         theme_background = "dark",
         terminal_colors = 256,
@@ -60,7 +60,7 @@ tomorrow_night_blue = Theme(
         window = ["4d5057", "4d5057"]
 )
 
-tomorrow_night_bright = Theme(
+tomorrow_night_bright = Scheme(
         scheme_name = "tomorrow-night-bright",
         theme_background = "dark",
         terminal_colors = 256,
@@ -80,7 +80,7 @@ tomorrow_night_bright = Theme(
         window = ["4d5057", "4d5057"]
 )
 
-tomorrow_night_eighties = Theme(
+tomorrow_night_eighties = Scheme(
         scheme_name = "tomorrow-night-eighties",
         theme_background = "dark",
         terminal_colors = 256,
