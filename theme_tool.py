@@ -5,9 +5,14 @@ import argparse
 import themes
 
 def main():
-    if sys.argv[1] in ("g", "generate"):
+    ap = argparse.ArgumentParser()
+    ap.add_argument("subcommand", type=str,
+            help="the subcommand you want to use. "
+            "currently only `generate` and `palette`")
+    args = ap.parse_args()
+    if args.subcommand == "generate":
         themes.generate()
-    elif sys.argv[1] in ("p", "palette"):
+    elif args.subcommand == "palette":
         themes.print_color_palette()
 
 if __name__ == "__main__":
