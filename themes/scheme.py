@@ -29,9 +29,12 @@ class Scheme(object):
     def add_rules(self, rules):
         for rule in rules:
             hi = HiRule(rule, self.color_set)
-            self.hi_rules[rule.group] = hi
+            self.hi_rules[rule.group.lower()] = hi
     def rule(self, name):
         return self.hi_rules[name]
+    def hi_rule(self, name):
+        # TODO this returned hi rules should be escaped to the correct color
+        return self.hi_rules[name.lower()]
     @property
     def rules(self):
         rule_str = ""

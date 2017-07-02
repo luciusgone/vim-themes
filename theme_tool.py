@@ -14,6 +14,8 @@ def main():
         themes.generate()
     elif args.subcommand == "palette":
         themes.print_color_palette()
+    else:
+        sys.exit("[ERROR] Command not recogonized")
 
 if __name__ == "__main__":
     main()

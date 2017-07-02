@@ -100,5 +100,10 @@ tomorrow_night_eighties = Scheme(
         window = ["4d5057", "4d5057"]
 )
 
-all_collection = (tomorrow, tomorrow_night, tomorrow_night_blue,
-        tomorrow_night_bright, tomorrow_night_eighties)
+all_collection = {
+        "tomorrow":tomorrow,
+        "tomorrow_night": tomorrow_night,
+        "tomorrow_night_blue": tomorrow_night_blue,
+        "tomorrow_night_bright": tomorrow_night_bright,
+        "tomorrow_night_eighties": tomorrow_night_eighties
+        }
