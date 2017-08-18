@@ -25,9 +25,9 @@ tomorrow_night = Scheme(
     scheme_name = "tomorrow-night",
     theme_background = "dark",
     foreground = ["250", "c5c8c6"],
-    background = ["235", "303030"],
-    selection = ["239", "585858"],
-    line = ["236", "3a3a3a"],
+    background = ["235", "1d1f21"],
+    selection = ["239", "373b41"],
+    line = ["236", "282a2e"],
     comment = ["245", "969896"],
     red = ["167", "cc6666"],
     orange = ["173", "de935f"],
@@ -36,7 +36,7 @@ tomorrow_night = Scheme(
     aqua = ["109", "8abeb7"],
     blue = ["109", "81a2be"],
     purple = ["139", "b294bb"],
-    window = ["240", "5e5e5e"]
+    window = ["240", "4d5057"]
 )
 
 tomorrow_night_blue = Scheme(

@@ -93,20 +93,15 @@ class Scheme(object):
         # TODO this returned hi rules should be escaped to the correct color
         return self.hi_rules[name.lower()]
     @property
-    def rules(self):
+    def palette_board(self):
+        return self.color_set.palette_board
+    def __str__(self):
         rule_str = ""
+        rule_str += "hi clear\n"
+        rule_str += "syntax reset\n"
+        rule_str += f"set background={self.theme_background}\n"
+        rule_str += f'let g:colors_name="{self.scheme_name}"\n'
+        rule_str += "\n"
         for name in self.hi_rules:
             rule_str += str(self.hi_rules[name])
         return rule_str
-    @property
-    def common_rules(self):
-        cr_str = ""
-        cr_str += "hi clear\n"
-        cr_str += "syntax reset\n"
-        cr_str += f"set background={self.theme_background}\n"
-        cr_str += f'let g:colors_name="{self.scheme_name}"\n'
-        cr_str += "\n"
-        return cr_str
-    @property
-    def palette_board(self):
-        return self.color_set.palette_board

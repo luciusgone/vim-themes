@@ -9,8 +9,7 @@ def generate():
     for t in all_collection:
         print(f"generating theme {t.scheme_name}")
         with open(f"./colors/{t.scheme_name}.vim", "w+") as f:
-            f.write(t.common_rules)
-            f.write(t.rules)
+            f.write(str(t))
 
 def print_color_palette():
     # TODO: we can print a specific palette
