@@ -93,10 +93,10 @@ tomorrow_night_eighties = Scheme(
     window = ["59", "4d5057"]
 )
 
-all_collection = [
+all_collection = (
     tomorrow,
     tomorrow_night,
     tomorrow_night_blue,
     tomorrow_night_bright,
     tomorrow_night_eighties,
-]
+)
