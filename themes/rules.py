@@ -48,8 +48,6 @@ all_rules = [
     Rule("Type", blue, None, none),
     Rule("Define", purple, None, none),
     Rule("Include", blue, None, None),
-    # TODO: find out what this is doing
-    # Rule("Ignore", "666666", None, None),
 
     # Vim Highlighting
     Rule("vimCommand", red, None, none),

@@ -1,8 +1,7 @@
 # attribute keywords
-none    = "none"
-bold    = "bold"
-reverse = "reverse"
-
+none       = "none"
+bold       = "bold"
+reverse    = "reverse"
 # color keywords
 foreground = "foreground"
 background = "background"

@@ -5,14 +5,14 @@ class ColorSet(object):
     """ColorSet for theme.
 
     Usage:
-        cs = ColorSet({'foreground': ['ffffff', '000000']}, 256)
+        cs = ColorSet({'foreground': ['1', '000000']})
         # gui color
         cs['foreground', True]
         # tui color
         cs['foreground', False]
     """
     def __init__(self, cs):
-        self._cs  = cs
+        self._cs = cs
     def __getitem__(self, k):
         if isinstance(k, tuple):
             if k[1]:
@@ -26,8 +26,7 @@ class ColorSet(object):
             return self._ansi_esc_str(name)
         except KeyError as e:
             raise AttributeError(e)
-    @property
-    def palette_board(self):
+    def __str__(self):
         global colorset
         bg_str = self._ansi_esc_str("background")
         bg = bg_str * (12 * 6 + 2) + "\n"
@@ -52,8 +51,8 @@ class Rule(object):
         self.fg    = fg
         self.bg    = bg
         self.attr  = attr
-    def __str__(self):
-        s = "group {} -> foreground: {}, background: {}, attr: {}"
+    def __repr__(self):
+        s = "<Rule group:{} foreground:{}, background:{}, attr:{}>"
         return s.format(self.group, self.fg, self.bg, self.attr)
 
 
@@ -83,6 +82,7 @@ class Scheme(object):
         self.theme_background = theme_background
         self.hi_rules         = {}
         self.color_set        = ColorSet(cs)
+        self.palette_board    = str(self.color_set)
     def add_rules(self, rules):
         for rule in rules:
             hi = HiRule(rule, self.color_set)
@@ -90,11 +90,7 @@ class Scheme(object):
     def rule(self, name):
         return self.hi_rules[name]
     def hi_rule(self, name):
-        # TODO this returned hi rules should be escaped to the correct color
         return self.hi_rules[name.lower()]
-    @property
-    def palette_board(self):
-        return self.color_set.palette_board
     def __str__(self):
         rule_str = ""
         rule_str += "hi clear\n"
@@ -105,3 +101,5 @@ class Scheme(object):
         for name in self.hi_rules:
             rule_str += str(self.hi_rules[name])
         return rule_str
+    def __repr__(self):
+        return "<Scheme scheme_name='{}'>".format(self.scheme_name)
