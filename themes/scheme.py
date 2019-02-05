@@ -28,15 +28,11 @@ class ColorSet(object):
             raise AttributeError(e)
     def __str__(self):
         global colorset
-        bg_str = self._ansi_esc_str("background")
-        bg = bg_str * (12 * 6 + 2) + "\n"
-        fg = ""
+        pb_str = ""
         for color in colorset:
-            if color != "background":
-                s = self._ansi_esc_str(color)
-                fg += bg_str * 2 + s * 4
-        fg += bg_str * 2 + "\n"
-        pb_str = bg + fg * 2 + bg
+            s = self._ansi_esc_str(color)
+            pb_str += s * 4
+        pb_str += "\n"
         return pb_str
     def _ansi_esc_str(self, name):
         c = self[name, False]
@@ -46,14 +42,15 @@ class ColorSet(object):
 class Rule(object):
     """Generic rules
     """
-    def __init__(self, group, fg, bg, attr):
+    def __init__(self, group, fg, bg, attr, guisp):
         self.group = group
         self.fg    = fg
         self.bg    = bg
         self.attr  = attr
+        self.guisp = guisp
     def __repr__(self):
-        s = "<Rule group:{} foreground:{}, background:{}, attr:{}>"
-        return s.format(self.group, self.fg, self.bg, self.attr)
+        s = "<Rule group:{} foreground:{}, background:{}, attr:{}, guisp:{}>"
+        return s.format(self.group, self.fg, self.bg, self.attr, self.guisp)
 
 
 class HiRule(object):
@@ -64,6 +61,7 @@ class HiRule(object):
         self.guibg = color_set[rule.bg, True] if rule.bg else None
         self.ctermbg = color_set[rule.bg, False] if rule.bg else None
         self.attr = rule.attr if rule.attr else None
+        self.guisp = color_set[rule.guisp, True] if rule.guisp else None
     def __str__(self):
         g = f"hi {self.group}"
         gf = f" guifg=#{self.guifg}" if self.guifg else ""
@@ -72,8 +70,9 @@ class HiRule(object):
         tb = f" ctermbg={self.ctermbg}" if self.ctermbg else ""
         ga = f" gui={self.attr}" if self.attr else ""
         ta = f" cterm={self.attr}" if self.attr else ""
+        gsp = f" guisp=#{self.guisp}" if self.guisp else ""
         eol = "\n"
-        return g + gf + gb + ga + tf + tb + ta + eol
+        return g + gf + gb + ga + tf + tb + ta + gsp + eol
 
 
 class Scheme(object):

@@ -1,6 +1,4 @@
 Personal Vim Themes
 ===================
 
-Just CopyCat work in a more verbose and explicit way.
-
-TODO: add more rules to make the theme complete
+Based on Chris Kempson's base16 but in 256 colors.
