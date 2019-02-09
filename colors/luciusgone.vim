@@ -10,7 +10,7 @@ hi Directory guifg=#5f87d7 ctermfg=68
 hi Error guifg=#303030 guibg=#ff8787 ctermfg=236 ctermbg=210
 hi ErrorMsg guifg=#ff8787 guibg=#303030 ctermfg=210 ctermbg=236
 hi Exception guifg=#ff8787 ctermfg=210
-hi FoldColumn guifg=#5fd7d7 guibg=#4e4e4e ctermfg=80 ctermbg=239
+hi FoldColumn guifg=#5fafaf guibg=#4e4e4e ctermfg=73 ctermbg=239
 hi Folded guifg=#8a8a8a guibg=#4e4e4e ctermfg=245 ctermbg=239
 hi IncSearch guifg=#4e4e4e guibg=#ffaf5f gui=none ctermfg=239 ctermbg=215 cterm=none
 hi Italic gui=none cterm=none
@@ -64,7 +64,7 @@ hi Number guifg=#ffaf5f ctermfg=215
 hi Operator guifg=#d0d0d0 gui=none ctermfg=252 cterm=none
 hi PreProc guifg=#ffd700 ctermfg=220
 hi Repeat guifg=#ffd700 ctermfg=220
-hi Special guifg=#5fd7d7 ctermfg=80
+hi Special guifg=#5fafaf ctermfg=73
 hi SpecialChar guifg=#af5f00 ctermfg=130
 hi Statement guifg=#ff8787 ctermfg=210
 hi StorageClass guifg=#ffd700 ctermfg=220
@@ -74,7 +74,7 @@ hi Tag guifg=#ffd700 ctermfg=220
 hi Todo guifg=#ffd700 guibg=#4e4e4e ctermfg=220 ctermbg=239
 hi Type guifg=#ffd700 gui=none ctermfg=220 cterm=none
 hi Typedef guifg=#ffd700 ctermfg=220
-hi cOperator guifg=#5fd7d7 ctermfg=80
+hi cOperator guifg=#5fafaf ctermfg=73
 hi cPreCondit guifg=#d787d7 ctermfg=176
 hi csClass guifg=#ffd700 ctermfg=220
 hi csAttribute guifg=#ffd700 ctermfg=220
@@ -85,7 +85,7 @@ hi csContextualStatement guifg=#d787d7 ctermfg=176
 hi csNewDecleration guifg=#ff8787 ctermfg=210
 hi cssBraces guifg=#d0d0d0 ctermfg=252
 hi cssClassName guifg=#d787d7 ctermfg=176
-hi cssColor guifg=#5fd7d7 ctermfg=80
+hi cssColor guifg=#5fafaf ctermfg=73
 hi DiffAdd guifg=#afd787 guibg=#4e4e4e ctermfg=150 ctermbg=239
 hi DiffChange guifg=#8a8a8a guibg=#4e4e4e ctermfg=245 ctermbg=239
 hi DiffDelete guifg=#ff8787 guibg=#4e4e4e ctermfg=210 ctermbg=239
@@ -131,7 +131,7 @@ hi jsFuncName guifg=#5f87d7 ctermfg=68
 hi jsFuncCall guifg=#5f87d7 ctermfg=68
 hi jsClassFuncName guifg=#5f87d7 ctermfg=68
 hi jsClassMethodType guifg=#d787d7 ctermfg=176
-hi jsRegexpString guifg=#5fd7d7 ctermfg=80
+hi jsRegexpString guifg=#5fafaf ctermfg=73
 hi jsGlobalObjects guifg=#ffd700 ctermfg=220
 hi jsGlobalNodeObjects guifg=#ffd700 ctermfg=220
 hi jsExceptions guifg=#ffd700 ctermfg=220
@@ -139,7 +139,7 @@ hi jsBuiltins guifg=#ffd700 ctermfg=220
 hi mailQuoted1 guifg=#ffd700 ctermfg=220
 hi mailQuoted2 guifg=#afd787 ctermfg=150
 hi mailQuoted3 guifg=#d787d7 ctermfg=176
-hi mailQuoted4 guifg=#5fd7d7 ctermfg=80
+hi mailQuoted4 guifg=#5fafaf ctermfg=73
 hi mailQuoted5 guifg=#5f87d7 ctermfg=68
 hi mailQuoted6 guifg=#ffd700 ctermfg=220
 hi mailURL guifg=#5f87d7 ctermfg=68
@@ -153,7 +153,7 @@ hi NERDTreeExecFile guifg=#d0d0d0 ctermfg=252
 hi phpMemberSelector guifg=#d0d0d0 ctermfg=252
 hi phpComparison guifg=#d0d0d0 ctermfg=252
 hi phpParent guifg=#d0d0d0 ctermfg=252
-hi phpMethodsVar guifg=#5fd7d7 ctermfg=80
+hi phpMethodsVar guifg=#5fafaf ctermfg=73
 hi pythonOperator guifg=#d787d7 ctermfg=176
 hi pythonRepeat guifg=#d787d7 ctermfg=176
 hi pythonInclude guifg=#d787d7 ctermfg=176
@@ -161,7 +161,7 @@ hi pythonStatement guifg=#d787d7 ctermfg=176
 hi rubyAttribute guifg=#5f87d7 ctermfg=68
 hi rubyConstant guifg=#ffd700 ctermfg=220
 hi rubyInterpolationDelimiter guifg=#af5f00 ctermfg=130
-hi rubyRegexp guifg=#5fd7d7 ctermfg=80
+hi rubyRegexp guifg=#5fafaf ctermfg=73
 hi rubySymbol guifg=#afd787 ctermfg=150
 hi rubyStringDelimiter guifg=#afd787 ctermfg=150
 hi sassidChar guifg=#ff8787 ctermfg=210
@@ -173,7 +173,7 @@ hi SignifySignAdd guifg=#afd787 guibg=#4e4e4e ctermfg=150 ctermbg=239
 hi SignifySignChange guifg=#5f87d7 guibg=#4e4e4e ctermfg=68 ctermbg=239
 hi SignifySignDelete guifg=#ff8787 guibg=#4e4e4e ctermfg=210 ctermbg=239
 hi SpellBad gui=undercurl cterm=undercurl guisp=#ff8787
-hi SpellLocal gui=undercurl cterm=undercurl guisp=#5fd7d7
+hi SpellLocal gui=undercurl cterm=undercurl guisp=#5fafaf
 hi SpellCap gui=undercurl cterm=undercurl guisp=#5f87d7
 hi SpellRare gui=undercurl cterm=undercurl guisp=#d787d7
 hi StartifyBracket guifg=#8a8a8a ctermfg=245
@@ -183,7 +183,7 @@ hi StartifyHeader guifg=#afd787 ctermfg=150
 hi StartifyNumber guifg=#ffaf5f ctermfg=215
 hi StartifyPath guifg=#8a8a8a ctermfg=245
 hi StartifySection guifg=#d787d7 ctermfg=176
-hi StartifySelect guifg=#5fd7d7 ctermfg=80
+hi StartifySelect guifg=#5fafaf ctermfg=73
 hi StartifySlash guifg=#8a8a8a ctermfg=245
 hi StartifySpecial guifg=#8a8a8a ctermfg=245
 hi javaOperator guifg=#5f87d7 ctermfg=68
