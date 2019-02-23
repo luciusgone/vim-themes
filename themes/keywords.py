@@ -58,10 +58,11 @@ colorset  = (
     base0F,
 )
 
-__ALL__ = (
+__all__ = (
     none,
     bold,
     reverse,
+    undercurl,
     base00,
     base01,
     base02,
