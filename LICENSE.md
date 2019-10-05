@@ -1,5 +1,5 @@
 luciusgone - A personal flavored vim theme based on base16
-Copyright © 2019 Luciusgone <luciusgone@gmail.com>
+Copyright © 2019 Lucius Gone <luciusgone@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the "Software"),
